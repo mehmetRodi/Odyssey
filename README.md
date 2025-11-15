@@ -1,1 +1,45 @@
 # Odyssey
+
+## 1. Start Backend + Database
+
+From the project root:
+
+```bash
+docker compose up --build
+```
+
+- Backend: http://localhost:8000  
+- Health check: http://localhost:8000/api/health/
+
+## 2. API Documentation
+
+- Swagger UI: http://localhost:8000/api/docs/  
+- ReDoc (Documentation): http://localhost:8000/api/redoc/
+
+## 3. Run the Frontend (Expo / React Native)
+
+Expo runs on your machine (not in Docker):
+
+```bash
+cd mobile
+npm install   # first time only
+npm start
+```
+
+## 4. View the Frontend
+
+### On your phone
+
+1. Install **Expo Go** on your device.
+2. Connect phone and computer to the same Wi‑Fi.
+3. Scan the QR code shown in the Expo terminal or devtools.
+
+### In your browser (web)
+
+- With Expo running, press **`w`** in the Expo terminal.
+
+### On iOS simulator (macOS)
+- Download IOS Emulator from XCode
+- With Expo running, press **`i`** in the Expo terminal.
+
+Changes in `mobile/` are reflected automatically via Fast Refresh.
