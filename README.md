@@ -4,7 +4,6 @@
 Make sure you have
 - Docker + Docker compose
 - Node.js and npm
-- Docker & Docker Compose
 - (Optional, for mobile) IOS/Android Emulator
 
 Copy the example environment and update secrets:
