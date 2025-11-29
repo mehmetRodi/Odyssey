@@ -1,12 +1,13 @@
 import { View, Text } from '@/components/Themed';
 import { TourListItemProps } from './TourListComp.config';
 import getStyles from './TourListComp.styles';
-import { useColorScheme } from '@/components/useColorScheme';
+import { getColorTheme } from '@/utils/getColorTheme';
 import { STAR } from '@/constants/Symbols';
+import { useMemo } from 'react';
 
 export default function TourListItem({ title, author, rating }: TourListItemProps) {
-  const theme = useColorScheme() ?? 'light';
-  const styles = getStyles(theme);
+  const theme = getColorTheme();
+  const styles = useMemo(() => getStyles(theme), [theme]);
 
   return (
     <View style={styles.card}>
@@ -19,7 +20,7 @@ export default function TourListItem({ title, author, rating }: TourListItemProp
         <View style={styles.right}>
           <Text style={styles.rating}>
             {STAR}
-            {rating}
+            {rating}/5
           </Text>
         </View>
       </View>
