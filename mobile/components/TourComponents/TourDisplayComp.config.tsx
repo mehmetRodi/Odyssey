@@ -9,12 +9,11 @@ export interface TourDisplayProps {
 }
 
 export const exampleTour: TourDisplayProps = {
-  image: "https://picsum.photos/400/300",
-  title: "Istanbul City Tour",
-  author: "Odyssey Travel",
-    duration: "4 hours",
-    length: "10 km",
-    reviewCount: "150 reviews",
-    rating: "4.5",
-
+  image: 'https://picsum.photos/400/300',
+  title: 'Istanbul City Tour',
+  author: 'Odyssey Travel',
+  duration: '4 hours',
+  length: '10 km',
+  reviewCount: '150 reviews',
+  rating: '4.5',
 };

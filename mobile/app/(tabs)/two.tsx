@@ -17,7 +17,7 @@ export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
       <SettingsRowItem
-        item={{ key: 'YARRAK', label: 'YARRAK', description: 'Description here', icon: User }}
+        item={{ key: 'Test_Key', label: 'Test_Label', description: 'Description here', icon: User }}
       />
     </View>
   );
