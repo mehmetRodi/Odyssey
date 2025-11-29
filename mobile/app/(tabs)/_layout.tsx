@@ -55,6 +55,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="tourDisplay"
+        options={{
+          title: 'Demo Tour',
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
     </Tabs>
   );
 }
