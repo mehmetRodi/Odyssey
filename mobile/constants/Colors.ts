@@ -1,8 +1,8 @@
 const primaryLight = '#6200ee';
-const primaryDark = '#86fcb5ff';
+const primaryDark = '#FF9EC7';
 
 const secondaryLight = '#03dac6';
-const secondaryDark = '#03dac6';
+const secondaryDark = '#A3C7FF';
 
 const black = '#000000';
 const white = '#ffffff';
@@ -13,12 +13,18 @@ const foregroundSecondaryDark = '#222222';
 const grayLight = '#f6f6f6';
 const grayDark = '#121212';
 
+const textGrayLight = '#2c2c2cff';
+const textGrayDark = '#d3d3d3ff';
+
+
+
 const pressLight = '#c7c7c7ff';
 const pressDark = '#343333ff';
 
 const Colors = {
   light: {
     text: black,
+    subText: textGrayLight,
     background: white,
     foreground: grayLight,
     foregroundSecondary: foregroundSecondaryLight,
@@ -31,6 +37,7 @@ const Colors = {
   },
   dark: {
     text: white,
+    subText: textGrayDark,
     background: black,
     foreground: grayDark,
     foregroundSecondary: foregroundSecondaryDark,

@@ -1,7 +1,10 @@
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { TourDisplayProps } from './TourDisplayComp.config';
-import { styles } from './TourDisplayComp.styles';
+import { getStyles } from './TourDisplayComp.styles';
+
 import { STAR } from '@/constants/Symbols';
+import { getColorTheme } from '@/utils/getColorTheme';
+import { useMemo } from 'react';
 
 export default function TourDisplayComp({
   image,
@@ -12,6 +15,10 @@ export default function TourDisplayComp({
   reviewCount,
   rating,
 }: TourDisplayProps) {
+
+  const theme = getColorTheme();
+  const styles = useMemo(() => getStyles(theme), [theme]);
+
   return (
     <View style={styles.card}>
       <Image source={{ uri: image }} style={styles.image} />

@@ -1,11 +1,15 @@
 import { StyleSheet } from 'react-native';
-import Colors from '@/constants/Colors';
+import Colors, {ThemeName} from '@/constants/Colors';
 
-export default function getStyles(theme: 'light' | 'dark') {
+
+export default function getStyles(theme: ThemeName) {
+  const color = Colors[theme];  
   return StyleSheet.create({
     card: {
-      width: '92%',
-      backgroundColor: Colors[theme].background,
+      width: '90%',
+      backgroundColor: color.background,
+      borderColor: color.primary,
+      borderWidth: 1,
       borderRadius: 16,
       paddingVertical: 18,
       paddingHorizontal: 20,
@@ -31,13 +35,13 @@ export default function getStyles(theme: 'light' | 'dark') {
     title: {
       fontSize: 20,
       fontWeight: '700',
-      color: Colors[theme].text,
+      color: color.primary,
     },
 
     author: {
       marginTop: 6,
       fontSize: 15,
-      color: '#7A7F87',
+      color: 'color.subText',
     },
 
     right: {
@@ -49,7 +53,7 @@ export default function getStyles(theme: 'light' | 'dark') {
       fontSize: 17,
       fontStyle: 'italic',
       fontWeight: '600',
-      color: Colors[theme].text,
+      color: color.subText,
     },
   });
 }
