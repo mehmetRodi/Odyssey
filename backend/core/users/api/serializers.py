@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from core.users.models.Admin import Admin
 from core.users.models.Follow import Follow
 from core.users.models.User import User
 
@@ -38,3 +39,15 @@ class FollowSerializer(serializers.ModelSerializer):
                 "Already following this user."
             )
         return attrs
+
+class AdminSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Admin
+        fields = [
+            "admin_id",
+            "name",
+            "hashed_password",
+        ]
+        extra_kwargs = {
+            "hashed_password": {"write_only": True},
+        }
