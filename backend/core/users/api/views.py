@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 
-from core.users.models import User
+from core.users.models.User import User
 from .serializers import UserSerializer
 
 
