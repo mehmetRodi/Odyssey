@@ -1,14 +1,24 @@
 import { StyleSheet } from 'react-native';
-
+import {
+  ChevronRight,
+  User,
+  Bell,
+  Shield,
+  Globe,
+  Palette,
+  HelpCircle,
+  LogOut,
+} from 'lucide-react-native';
 import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
+import { SettingsRowItem } from '@/components/SettingComponents/SettingsRowItem';
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <SettingsRowItem
+        item={{ key: 'YARRAK', label: 'YARRAK', description: 'Description here', icon: User }}
+      />
     </View>
   );
 }
