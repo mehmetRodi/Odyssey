@@ -7,6 +7,7 @@ export interface SettingsItemConfig {
   key: string;
   label: string;
   description?: string;
-  icon: IconType;
+  icon?: IconType;
   onPressKey?: string;
+  imageUri?: string;
 }

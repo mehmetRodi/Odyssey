@@ -11,6 +11,7 @@ import { Text, View } from '@/components/Themed';
 import { SettingsRowItem } from '@/components/SettingComponents/SettingsRowItem';
 import { SettingsRowGroup } from '@/components/SettingComponents/SettingsRowGroup';
 import type { SettingsItemConfig } from '@/components/SettingComponents/SettingsRowItem.config';
+import { Spacing } from '@/constants/Spacing';
 
 type SettingsGroup = {
   title: string;
@@ -19,6 +20,17 @@ type SettingsGroup = {
 
 export default function TabTwoScreen() {
   const settingsGroups: SettingsGroup[] = [
+    {
+      title: '',
+      items: [
+        {
+          key: 'profile',
+          label: 'Tour Explorer',
+          description: 'explorer@example.com',
+          imageUri: "https://ui-avatars.com/api/?name=Tour+Explorer",
+        },
+      ]
+    },
     {
       title: 'Account',
       items: [
@@ -102,17 +114,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    paddingVertical: 24,
+    paddingVertical: Spacing.xs,
   },
   section: {
     backgroundColor: 'transparent',
-    paddingHorizontal: 16,
-    marginBottom: 24,
+    paddingHorizontal: Spacing.lg,
+    marginBottom: Spacing.lg,
   },
   sectionTitle: {
     fontSize: 14,
     fontWeight: '500',
-    marginBottom: 8,
+    marginBottom: Spacing.xs,
+    paddingLeft: Spacing.xl,
     opacity: 0.7,
   },
 });

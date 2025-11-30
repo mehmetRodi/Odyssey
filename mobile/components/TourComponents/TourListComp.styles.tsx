@@ -8,7 +8,7 @@ export default function getStyles(theme: ThemeName) {
     card: {
       width: '90%',
       backgroundColor: color.background,
-      borderColor: color.primary,
+      borderColor: color.secondary,
       borderWidth: 1,
       borderRadius: 16,
       paddingVertical: 18,

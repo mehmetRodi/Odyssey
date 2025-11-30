@@ -6,7 +6,7 @@ export const getStyles = (theme: ThemeName) => {
   return StyleSheet.create({
     card: {
       width: '90%',
-      maxWidth: 400,
+
       backgroundColor: color.background,
       borderRadius: 15,
       overflow: 'hidden',
@@ -50,6 +50,7 @@ export const getStyles = (theme: ThemeName) => {
     metaRow: {
       marginTop: 4,
       width: '60%',
+      maxWidth: 200,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',

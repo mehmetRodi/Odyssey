@@ -56,5 +56,11 @@ export const rowItemStyle = (theme: ThemeName) => {
     chevron: {
       color: color.text,
     },
+    
+    profileImage: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    },
   });
 };
