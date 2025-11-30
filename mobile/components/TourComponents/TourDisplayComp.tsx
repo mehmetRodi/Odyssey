@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import { TourDisplayProps } from './TourDisplayComp.config';
 import { getStyles } from './TourDisplayComp.styles';
 
@@ -20,7 +20,13 @@ export default function TourDisplayComp({
   const styles = useMemo(() => getStyles(theme), [theme]);
 
   return (
-    <View style={styles.card}>
+    <Pressable
+      onPress={() => {}}
+      style={({ pressed }) => [
+        styles.card,
+        pressed && { opacity: 0.3 }
+      ]}
+    >
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.infoContainer}>
         <View style={styles.header}>
@@ -43,6 +49,6 @@ export default function TourDisplayComp({
           <Text style={styles.metaText}>{reviewCount}</Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
