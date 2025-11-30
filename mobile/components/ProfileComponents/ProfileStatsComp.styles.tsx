@@ -1,29 +1,33 @@
 import { StyleSheet } from 'react-native';
 import Colors, {ThemeName} from '@/constants/Colors';
+import { Spacing } from '@/constants/Spacing';
 
 
 export default function getStyles(theme: ThemeName) {
   const color = Colors[theme];  
   return StyleSheet.create({
   card: {
-    backgroundColor: color.background,
-    borderRadius: 24,
-    paddingVertical: 24,
-    paddingHorizontal: 20,
-    marginTop: -20,
+    backgroundColor: color.foreground,
+    borderRadius: Spacing.borderRadius,
+    paddingVertical: Spacing.lg,
+    paddingHorizontal: Spacing.lg,
+    marginTop: -Spacing.xxl,
     width: '90%',
     alignSelf: 'center',
+
     shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 8,
     shadowOffset: { width: 0, height: 4 },
     elevation: 4,
+    maxWidth: 500,
   },
 
   topRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 16,
+    marginBottom: Spacing.lg,
+    paddingHorizontal: '10%',
   },
   statItem: {
     alignItems: 'center',
@@ -31,26 +35,26 @@ export default function getStyles(theme: ThemeName) {
   statValue: {
     fontSize: 24,
     fontWeight: '700',
-    marginTop: 4,
+    marginTop: Spacing.xs,
     color: color.text,
   },
   statLabel: {
     fontSize: 14,
     color: color.subText,
-    marginTop: 4
+    marginTop: Spacing.xs,
   },
 
   divider: {
     height: 1,
     backgroundColor: '#E5E5E5',
-    marginVertical: 12,
+    marginVertical: Spacing.md,
   },
 
   bottomRow: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
-    marginTop: 4,
+    marginTop: Spacing.xs,
   },
   bottomItem: {
     alignItems: 'center',
@@ -64,12 +68,12 @@ export default function getStyles(theme: ThemeName) {
   bottomLabel: {
     fontSize: 14,
     color: color.subText,
-    marginTop: 4,
+    marginTop: Spacing.xs,
   },
 
   bottomDivider: {
     width: 1,
-    height: 28,
+    height: '80%',
     backgroundColor: '#E0E0E0',
   },
 });

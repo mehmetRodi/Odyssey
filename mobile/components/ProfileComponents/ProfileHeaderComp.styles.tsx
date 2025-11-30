@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import Colors, {ThemeName} from '@/constants/Colors';
+import { Spacing } from '@/constants/Spacing';
 
 
 export default function getStyles(theme: ThemeName) {
@@ -7,8 +8,8 @@ export default function getStyles(theme: ThemeName) {
   return StyleSheet.create({
   container: {
     width: '100%',
-    paddingTop: 64,
-    paddingBottom: 32,
+    paddingTop: '5%',
+    paddingBottom: '10%',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: color.primary,
@@ -34,6 +35,16 @@ export default function getStyles(theme: ThemeName) {
     fontSize: 18,
     color: color.text,
     opacity: 0.9,
+  },
+  titleWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: Spacing.sm,
+    borderRadius: Spacing.borderRadius,
+    width: 'auto',
+    backgroundColor: color.secondary,
+    marginBottom: 4,
   },
 });
 }
