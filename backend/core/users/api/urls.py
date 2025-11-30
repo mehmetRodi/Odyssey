@@ -5,7 +5,7 @@ from .views import AdminViewSet, FollowViewSet, UserViewSet
 
 
 router = DefaultRouter()
-router.register("", UserViewSet, basename="user")
+router.register("users", UserViewSet, basename="user")
 router.register("follows", FollowViewSet, basename="follow")
 router.register("admins", AdminViewSet, basename="admin")
 

@@ -6,12 +6,12 @@ class Follow(models.Model):
     follower = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name="followers",
+        related_name="followees",
     )
     followee = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        related_name="followees",
+        related_name="followers",
     )
     created_at = models.DateTimeField(auto_now_add=True)
 
