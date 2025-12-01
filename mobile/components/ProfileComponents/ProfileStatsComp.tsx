@@ -1,20 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import getStyles  from './ProfileStatsComp.styles';
+import getStyles from './ProfileStatsComp.styles';
 import { Props } from './ProfileStatsComp.config';
 import { getColorTheme } from '@/utils/getColorTheme';
 
-
-export default function ProfileStatsComp({
-  xp,
-  tours,
-  badges,
-  followers,
-  following,
-}: Props) {
- const theme = getColorTheme();
+export default function ProfileStatsComp({ xp, tours, badges, followers, following }: Props) {
+  const theme = getColorTheme();
   const styles = getStyles(theme);
-    
+
   return (
     <View style={styles.card}>
       <View style={styles.topRow}>

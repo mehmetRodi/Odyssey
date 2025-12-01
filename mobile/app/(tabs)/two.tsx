@@ -1,12 +1,5 @@
 import { ScrollView, StyleSheet } from 'react-native';
-import {
-  User,
-  Bell,
-  Shield,
-  Globe,
-  Palette,
-  HelpCircle,
-} from 'lucide-react-native';
+import { User, Bell, Shield, Globe, Palette, HelpCircle } from 'lucide-react-native';
 import { Text, View } from '@/components/Themed';
 import { SettingsRowItem } from '@/components/SettingComponents/SettingsRowItem';
 import { SettingsRowGroup } from '@/components/SettingComponents/SettingsRowGroup';
@@ -27,9 +20,9 @@ export default function TabTwoScreen() {
           key: 'profile',
           label: 'Tour Explorer',
           description: 'explorer@example.com',
-          imageUri: "https://ui-avatars.com/api/?name=Tour+Explorer",
+          imageUri: 'https://ui-avatars.com/api/?name=Tour+Explorer',
         },
-      ]
+      ],
     },
     {
       title: 'Account',

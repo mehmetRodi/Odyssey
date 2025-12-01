@@ -4,7 +4,6 @@ import { Spacing } from '../../constants/Spacing';
 import { ThemeName } from '../../constants/Colors';
 
 export const settingsRowGroupStyle = (theme: ThemeName) => {
-
   return StyleSheet.create({
     container: {
       backgroundColor: Colors[theme].foreground,

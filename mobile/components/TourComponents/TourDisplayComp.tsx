@@ -15,17 +15,13 @@ export default function TourDisplayComp({
   reviewCount,
   rating,
 }: TourDisplayProps) {
-
   const theme = getColorTheme();
   const styles = useMemo(() => getStyles(theme), [theme]);
 
   return (
     <Pressable
       onPress={() => {}}
-      style={({ pressed }) => [
-        styles.card,
-        pressed && { opacity: 0.3 }
-      ]}
+      style={({ pressed }) => [styles.card, pressed && { opacity: 0.3 }]}
     >
       <Image source={{ uri: image }} style={styles.image} />
       <View style={styles.infoContainer}>

@@ -6,11 +6,10 @@ export type Props = {
   following?: number;
 };
 
-
 export const exampleProfileStats: Props = {
-    xp: 1200,
-    tours: 5,
-    badges: 3,
-    followers: 100,
-    following: 50,
+  xp: 1200,
+  tours: 5,
+  badges: 3,
+  followers: 100,
+  following: 50,
 };

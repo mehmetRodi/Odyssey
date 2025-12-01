@@ -2,8 +2,9 @@ import React from 'react';
 import { View, ViewStyle } from 'react-native';
 import { settingsRowGroupStyle } from './SettingsRowGroup.styles';
 import { SettingsRowItem } from './SettingsRowItem';
-import { useColorScheme } from '@/components/useColorScheme';
+import { getColorTheme } from '@/utils/getColorTheme';
 import { ThemeName } from '../../constants/Colors';
+
 
 interface SettingsRowGroupProps {
   children: React.ReactNode;
@@ -11,8 +12,7 @@ interface SettingsRowGroupProps {
 }
 
 export const SettingsRowGroup: React.FC<SettingsRowGroupProps> = ({ children, style }) => {
-  const scheme = useColorScheme() ?? 'light';
-  const theme = scheme as ThemeName;
+  const theme = getColorTheme();
 
   const styles = settingsRowGroupStyle(theme);
   const childArray = React.Children.toArray(children);

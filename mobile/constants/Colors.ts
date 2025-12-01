@@ -16,8 +16,6 @@ const grayDark = '#121212';
 const textGrayLight = '#2c2c2cff';
 const textGrayDark = '#d3d3d3ff';
 
-
-
 const pressLight = '#c7c7c7ff';
 const pressDark = '#343333ff';
 

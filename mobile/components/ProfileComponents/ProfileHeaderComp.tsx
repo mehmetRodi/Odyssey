@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { View, Text } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -8,10 +6,7 @@ import { getColorTheme } from '@/utils/getColorTheme';
 import getStyles from './ProfileHeaderComp.styles';
 import { ProfileHeaderProps } from './ProfileHeaderComp.config';
 
-export default function ProfileHeaderComp({
-  title,
-  subtitle,
-}: ProfileHeaderProps) {
+export default function ProfileHeaderComp({ title, subtitle }: ProfileHeaderProps) {
   const theme = getColorTheme();
   const styles = getStyles(theme);
 
@@ -28,4 +23,3 @@ export default function ProfileHeaderComp({
     </View>
   );
 }
-

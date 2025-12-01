@@ -32,10 +32,7 @@ export const SettingsRowItem: React.FC<SettingsRowItemProps> = ({
     >
       <View style={styles.iconContainer}>
         {item.imageUri ? (
-          <Image
-            source={{ uri: item.imageUri }}
-            style={styles.profileImage}
-          />
+          <Image source={{ uri: item.imageUri }} style={styles.profileImage} />
         ) : item.icon ? (
           <item.icon size={20} color={styles.icon.color as string} />
         ) : null}
