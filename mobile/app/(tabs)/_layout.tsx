@@ -1,7 +1,7 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
-import { Pressable } from 'react-native';
+import { Pressable, View } from 'react-native';
 
 import Colors from '@/constants/Colors';
 import { getColorTheme } from '@/utils/getColorTheme';
@@ -31,7 +31,7 @@ export default function TabLayout() {
           backgroundColor: Colors[colorTheme ?? 'light'].primary,
         },
       }}
-    >
+>
       <Tabs.Screen
         name="index"
         options={{

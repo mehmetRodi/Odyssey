@@ -18,7 +18,8 @@ export default function ProfileHeaderComp({ title, subtitle }: ProfileHeaderProp
         </View>
       </View>
 
-      <Text style={styles.title}>{title}</Text>
+      <Text style={[styles.title]}>{title}</Text>
+
       <Text style={styles.subtitle}>{subtitle}</Text>
     </View>
   );

@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
-import Colors, { ThemeName } from '@/constants/Colors';
+import Colors, {ThemeName} from '@/constants/Colors';
+import { Spacing } from '@/constants/Spacing';
+
 
 export default function getStyles(theme: ThemeName) {
   const color = Colors[theme];
@@ -9,11 +11,11 @@ export default function getStyles(theme: ThemeName) {
       backgroundColor: color.background,
       borderColor: color.secondary,
       borderWidth: 1,
-      borderRadius: 16,
-      paddingVertical: 18,
-      paddingHorizontal: 20,
+      borderRadius: Spacing.borderRadius,
+      paddingVertical: Spacing.md,
+      paddingHorizontal: Spacing.lg,
       alignSelf: 'center',
-      marginVertical: 10,
+      marginVertical: Spacing.sm,
       shadowColor: '#000',
       shadowOpacity: 0.06,
       shadowRadius: 8,
@@ -38,7 +40,7 @@ export default function getStyles(theme: ThemeName) {
     },
 
     author: {
-      marginTop: 6,
+      marginTop: Spacing.xs,
       fontSize: 15,
       color: 'color.subText',
     },
