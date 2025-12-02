@@ -1,6 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-class User(models.Model):
+class User(AbstractUser):
     NORMAL = 1
     PREMIUM = 2
     CREATOR = 3
@@ -11,9 +12,9 @@ class User(models.Model):
         (CREATOR, "Content Creator"),
     ]
 
-    user_id = models.BigAutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    hashed_password = models.CharField(max_length=255)
+    # Removed user_id, name, hashed_password as AbstractUser handles these
+    # (id, username/first_name/last_name, password)
+    
     xp = models.IntegerField(default=0)
     follow_count = models.IntegerField(default=0)
     follower_count = models.IntegerField(default=0)
@@ -31,4 +32,4 @@ class User(models.Model):
         db_table = "user"
 
     def __str__(self):
-        return f"{self.name} (id={self.user_id})"
+        return f"{self.username} (id={self.id})"

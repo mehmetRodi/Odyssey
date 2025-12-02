@@ -1,5 +1,5 @@
 from django.db import models
-from core.users.models.User import User
+from apps.users.models.User import User
 
 class Follow(models.Model):
     follow_id = models.BigAutoField(primary_key=True)
@@ -20,4 +20,4 @@ class Follow(models.Model):
         unique_together = ("follower", "followee")
 
     def __str__(self):
-        return f"{self.follower.user_id} → {self.followee.user_id}"
+        return f"{self.follower.username} -> {self.followee.username}"

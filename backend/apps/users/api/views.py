@@ -5,12 +5,12 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import viewsets
 
-from core.users.models import User, Follow, Admin
+from apps.users.models import User, Follow, Admin
 from .serializers import UserSerializer, FollowSerializer, AdminSerializer
 
 
 class UserViewSet(ModelViewSet):
-    queryset: QuerySet[User] = User.objects.all().order_by("user_id")
+    queryset: QuerySet[User] = User.objects.all().order_by("id")
     serializer_class = UserSerializer
 
     @action(detail=True, methods=["get"], url_path="followers")

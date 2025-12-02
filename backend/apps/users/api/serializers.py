@@ -1,26 +1,40 @@
 from rest_framework import serializers
 
-from core.users.models.Admin import Admin
-from core.users.models.Follow import Follow
-from core.users.models.User import User
+from apps.users.models.Admin import Admin
+from apps.users.models.Follow import Follow
+from apps.users.models.User import User
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = [
-            "user_id",
-            "name",
-            "hashed_password",
+            "id",
+            "username",
+            "first_name",
+            "last_name",
+            "email",
+            "password",
             "xp",
             "follow_count",
             "follower_count",
             "token",
             "level",
             "country",
+            "user_type",
+            "tour_count",
+            "rating",
         ]
         extra_kwargs = {
-            "hashed_password": {"write_only": True},
+            "password": {"write_only": True},
         }
+
+    def create(self, validated_data):
+        password = validated_data.pop('password', None)
+        user = super().create(validated_data)
+        if password:
+            user.set_password(password)
+            user.save()
+        return user
 
 class FollowSerializer(serializers.ModelSerializer):
     class Meta:

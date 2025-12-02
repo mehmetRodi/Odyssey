@@ -26,7 +26,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 
     # API routes
-    path("api/", include("core.urls")),
+    path("api/", include("apps.users.api.urls")),
 
     # OpenAPI schema
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
