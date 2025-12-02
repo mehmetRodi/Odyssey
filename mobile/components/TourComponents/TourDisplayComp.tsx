@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
+import { View, Text, Image, Pressable } from 'react-native';
 import { TourDisplayProps } from './TourDisplayComp.config';
 import { getStyles } from './TourDisplayComp.styles';
 
