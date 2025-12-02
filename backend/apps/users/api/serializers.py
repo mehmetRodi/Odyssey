@@ -40,9 +40,10 @@ class FollowSerializer(serializers.ModelSerializer):
     class Meta:
         model = Follow
         fields = ["follow_id", "follower", "followee"]
+        read_only_fields = ["follower"]
 
     def validate(self, attrs):
-        follower = attrs.get("follower")
+        follower = self.context['request'].user
         followee = attrs.get("followee")
         if follower == followee:
             raise serializers.ValidationError(

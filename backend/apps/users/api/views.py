@@ -13,6 +13,11 @@ class UserViewSet(ModelViewSet):
     queryset: QuerySet[User] = User.objects.all().order_by("id")
     serializer_class = UserSerializer
 
+    @action(detail=False, methods=["get"], url_path="me")
+    def me(self, request):
+        serializer = self.get_serializer(request.user)
+        return Response(serializer.data)
+
     @action(detail=True, methods=["get"], url_path="followers")
     def followers(self, request, pk=None):
         user = self.get_object()
@@ -40,6 +45,9 @@ class FollowViewSet(CreateModelMixin, DestroyModelMixin, GenericViewSet):
         "followee",
     )
     serializer_class = FollowSerializer
+
+    def perform_create(self, serializer):
+        serializer.save(follower=self.request.user)
 
 
 class AdminViewSet(viewsets.ModelViewSet):

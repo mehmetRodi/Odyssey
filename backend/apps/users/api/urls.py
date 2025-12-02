@@ -9,6 +9,8 @@ router.register("users", UserViewSet, basename="user")
 router.register("follows", FollowViewSet, basename="follow")
 router.register("admins", AdminViewSet, basename="admin")
 
+from rest_framework.authtoken.views import obtain_auth_token
+
 urlpatterns = [
     path("", include(router.urls)),
 ]
